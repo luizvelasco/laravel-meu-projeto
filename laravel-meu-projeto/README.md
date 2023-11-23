@@ -17,6 +17,21 @@ Gerar a chave
 php artisan key:generate
 ```
 
+Iniciar o projeto criado com Laravel
+```
+php artisan serve
+```
+
+Acessar o conteúdo padrão do Laravel
+```
+http://127.0.0.1:8000/
+```
+
+Executar as migration
+```
+php artisan migrate
+```
+
 ## Sequencia para criar o projeto
 Criar o projeto com Laravel
 ```
@@ -36,6 +51,19 @@ php artisan serve
 Acessar o conteúdo padrão do Laravel
 ```
 http://127.0.0.1:8000/
+```
+
+Criar a migration
+```
+php artisan make:migration create_name_table
+```
+```
+php artisan make:migration create_courses_table
+```
+
+Executar as migration
+```
+php artisan migrate
 ```
 
 ## Enviar para o GitHub
