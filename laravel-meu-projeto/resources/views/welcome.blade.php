@@ -13,5 +13,7 @@
     </head>
     <body>
         <h1>Meu Projeto com Laravel</h1>
+
+        <a href="{{ route ('course.index')}}">Listar os cursos</a>
     </body>
 </html>
