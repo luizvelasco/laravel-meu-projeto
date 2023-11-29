@@ -8,6 +8,12 @@
 <body>
     <h2>Detalhes do Curso</h2>
 
+    @if(session('success'))
+        <p style="color: #082">
+            {{ session('success')}}
+        </p>
+    @endif
+
     <a href="{{ route('course.index')}}">Listar</a><br>
     <a href="{{ route('course.create')}}">Cadastrar</a><br>
     <a href="{{ route('course.edit')}}">Editar</a><br>
