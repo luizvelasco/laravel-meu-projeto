@@ -10,8 +10,11 @@ class CourseController extends Controller
     // Listar os cursos
     public function index(){
 
+        // Recuperar os registros do banco de dados
+        $courses = Course::orderByDesc('created_at')->paginate(10);
+
         // Carregar a View
-        return view ('courses.index');
+        return view ('courses.index', ['courses' => $courses]);
     }
 
     // Detalhes do curso
