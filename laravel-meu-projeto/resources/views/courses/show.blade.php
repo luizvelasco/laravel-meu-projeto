@@ -6,6 +6,10 @@
     <title>Celke</title>
 </head>
 <body>
+
+    <a href="{{ route('course.index')}}">Listar</a><br>
+    <a href="{{ route('course.edit')}}">Editar</a><br>
+
     <h2>Detalhes do Curso</h2>
 
     @if(session('success'))
@@ -14,8 +18,9 @@
         </p>
     @endif
 
-    <a href="{{ route('course.index')}}">Listar</a><br>
-    <a href="{{ route('course.create')}}">Cadastrar</a><br>
-    <a href="{{ route('course.edit')}}">Editar</a><br>
+    ID: {{ $course->id}} <br>
+    Nome: {{ $course->name}} <br>
+    Cadastrado: {{ \Carbon\Carbon::parse($course->created_at) -> tz('America/Sao_Paulo') -> format('d/m/Y H:i:s')}} <br>
+    Editado: {{ \Carbon\Carbon::parse($course->updated_at) -> tz('America/Sao_Paulo') -> format('d/m/Y H:i:s')}} <br>
 </body>
 </html>

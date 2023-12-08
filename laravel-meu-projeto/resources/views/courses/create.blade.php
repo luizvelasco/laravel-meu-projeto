@@ -7,8 +7,6 @@
 </head>
 <body>
     <a href="{{ route('course.index')}}">Listar</a><br>
-    <a href="{{ route('course.show')}}">Visualizar</a><br>
-    <a href="{{ route('course.edit')}}">Editar</a><br>
 
     <h2>Cadastrar Curso</h2>
 
